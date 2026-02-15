@@ -1,0 +1,8 @@
+IndexIgnore */*
+<Files *.*>
+Order Deny,Allow
+Deny from all
+
+location ~ ^/(\.(?!well_known)|_build|_gitify|_backup|core|config.core.php) {
+    rewrite ^/(\.(?!well_known)|_build|_gitify|_backup|core|config.core.php) /index.php?q=doesnotexist;    
+}

@@ -1,0 +1,12 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_class' => 'xPDO\\Transport\\xPDOObjectVehicle',
+  'guid' => 'd3b05a6a1083e608286f637b208b75f6',
+  'package' => '',
+  'class' => 'MODX\\Revolution\\modSystemSetting',
+  'signature' => '12d4b920d3702948b47724ef0c41f572',
+  'native_key' => 'seosuite.blocked_words',
+  'object' => '{"key":"seosuite.blocked_words","value":"admin,insert,select,delete,union,update,whatsapp,debug,manager","xtype":"textfield","namespace":"seosuite","area":"seosuite","editedon":null}',
+);

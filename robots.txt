@@ -1,0 +1,44 @@
+User-agent: *
+Allow: /
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+
+# MODX system folders
+Disallow: /assets/cache/
+Disallow: /assets/components/
+Disallow: /core/
+Disallow: /manager/
+Disallow: /connectors/
+
+# Service
+Disallow: /index.php
+Disallow: /search/
+Disallow: /test/
+Disallow: /tmp/
+
+# Parameters
+Disallow: /*?q=*
+Disallow: /*?search=*
+Disallow: /*?filter=*
+Disallow: /*?sort=*
+Disallow: /*?page=2
+Disallow: /*?page=3
+Disallow: /*?utm_
+
+# Sitemap
+Sitemap: http://kiriloyu.beget.tech/sitemap.xml
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Disallow: /core/
+Disallow: /manager/
+Crawl-delay: 2
+Clean-param: utm_source&utm_medium&utm_campaign&ref /

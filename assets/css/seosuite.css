@@ -1,0 +1,9 @@
+/* Стилизация SEO Suite полей в админке */
+.seosuite-field {
+    margin-bottom: 15px;
+}
+.seosuite-field label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}

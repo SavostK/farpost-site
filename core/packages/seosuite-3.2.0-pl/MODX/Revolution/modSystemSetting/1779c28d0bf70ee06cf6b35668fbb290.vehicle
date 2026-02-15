@@ -1,0 +1,12 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_class' => 'xPDO\\Transport\\xPDOObjectVehicle',
+  'guid' => '86b9d479c1b4363aa35b02d436058cc4',
+  'package' => '',
+  'class' => 'MODX\\Revolution\\modSystemSetting',
+  'signature' => '1779c28d0bf70ee06cf6b35668fbb290',
+  'native_key' => 'seosuite.panel_position_top',
+  'object' => '{"key":"seosuite.panel_position_top","value":"0","xtype":"combo-boolean","namespace":"seosuite","area":"seosuite_tab_meta","editedon":null}',
+);

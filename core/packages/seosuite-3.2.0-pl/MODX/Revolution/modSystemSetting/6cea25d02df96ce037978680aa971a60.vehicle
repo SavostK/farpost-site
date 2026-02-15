@@ -1,0 +1,12 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_class' => 'xPDO\\Transport\\xPDOObjectVehicle',
+  'guid' => '132ffdf49e556272898ec0985ce8925f',
+  'package' => '',
+  'class' => 'MODX\\Revolution\\modSystemSetting',
+  'signature' => '6cea25d02df96ce037978680aa971a60',
+  'native_key' => 'seosuite.user_name',
+  'object' => '{"key":"seosuite.user_name","value":"","xtype":"textfield","namespace":"seosuite","area":"seosuite","editedon":null}',
+);

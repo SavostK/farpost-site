@@ -1,0 +1,12 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_class' => 'xPDO\\Transport\\xPDOObjectVehicle',
+  'guid' => '872af49194646be9d7c70ffe3527663a',
+  'package' => '',
+  'class' => 'MODX\\Revolution\\modSystemSetting',
+  'signature' => 'f44dd028e4ed66eb651407aefead2612',
+  'native_key' => 'seosuite.meta.preview.length_mobile_description',
+  'object' => '{"key":"seosuite.meta.preview.length_mobile_description","value":"130","xtype":"textfield","namespace":"seosuite","area":"seosuite_tab_meta","editedon":null}',
+);
