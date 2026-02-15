@@ -1,0 +1,26 @@
+id: 2
+source: 1
+templatename: 'Farpost Main Template'
+description: 'Основной шаблон для сайта Farpost'
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    [[$head]]
+    
+    <!-- МИКРОРАЗМЕТКА Organization -->
+    [[$SchemaOrg]]
+</head>
+<body>
+    [[$header]]
+    [[$BreadcrumbsMicro]]
+    [[*content]]
+    
+    
+    [[$footer]]
+    [[$scripts]]
+</body>
+</html>

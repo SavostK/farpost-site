@@ -1,0 +1,586 @@
+id: 35
+source: 1
+name: SiteUnderDevelopment
+description: ''
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт в разработке | Farpost Technologies</title>
+    
+    <!-- Стили и шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Анимированные частицы */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Логотип и заголовок */
+        .logo {
+            margin-bottom: 30px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #c3cfe2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        /* Индикатор прогресса */
+        .progress-container {
+            margin: 40px 0;
+        }
+        
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .progress-bar {
+            height: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            border-radius: 10px;
+            width: 75%;
+            animation: progress 2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(
+                -45deg,
+                rgba(255, 255, 255, 0.2) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 75%,
+                transparent
+            );
+            background-size: 50px 50px;
+            animation: move 2s linear infinite;
+        }
+        
+        @keyframes progress {
+            from { width: 0%; }
+            to { width: 75%; }
+        }
+        
+        @keyframes move {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        
+        /* Таймер запуска */
+        .launch-timer {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .timer-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .timer-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .timer-value {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, #c3cfe2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        
+        .timer-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        
+        /* Контакты */
+        .contacts {
+            margin-top: 40px;
+        }
+        
+        .contacts-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .contact-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* Форма подписки */
+        .subscribe {
+            margin-top: 40px;
+        }
+        
+        .subscribe-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .subscribe-form {
+            display: flex;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .subscribe-input {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .subscribe-input:focus {
+            outline: none;
+        }
+        
+        .subscribe-button {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 0 50px 50px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .subscribe-button:hover {
+            background: linear-gradient(135deg, #45a049, #7cb342);
+        }
+        
+        /* Соцсети */
+        .social {
+            margin-top: 40px;
+        }
+        
+        .social-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        /* Копирайт */
+        .copyright {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Анимация появления */
+        .container {
+            animation: fadeIn 1s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .timer {
+                gap: 10px;
+            }
+            
+            .timer-value {
+                font-size: 2rem;
+            }
+            
+            .contact-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .subscribe-form {
+                flex-direction: column;
+            }
+            
+            .subscribe-input,
+            .subscribe-button {
+                border-radius: 50px;
+                width: 100%;
+            }
+            
+            .subscribe-input {
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .timer {
+                flex-wrap: wrap;
+            }
+            
+            .timer-item {
+                width: calc(50% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Анимированные частицы -->
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <!-- Логотип -->
+        <div class="logo">
+            <img src="https://cdn-ru.bitrix24.ru/b32232902/landing/a3c/a3c163cb288146110b226247de6ff649/gorizont_122chern_proz_1x_1x.png" 
+                 alt="Farpost Technologies">
+        </div>
+        
+        <!-- Заголовки -->
+        <h1 class="title">Скоро открытие!</h1>
+        <p class="subtitle">Мы создаем для вас современный и удобный сайт</p>
+        
+        <!-- Индикатор прогресса -->
+        <div class="progress-container">
+            <div class="progress-text">
+                <span>Прогресс разработки</span>
+                <span>75%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+        
+        <!-- Таймер запуска -->
+        <div class="launch-timer">
+            <div class="timer-title">До запуска осталось:</div>
+            <div class="timer">
+                <div class="timer-item">
+                    <div class="timer-value" id="days">15</div>
+                    <div class="timer-label">дней</div>
+                </div>
+                <div class="timer-item">
+                    <div class="timer-value" id="hours">08</div>
+                    <div class="timer-label">часов</div>
+                </div>
+                <div class="timer-item">
+                    <div class="timer-value" id="minutes">45</div>
+                    <div class="timer-label">минут</div>
+                </div>
+                <div class="timer-item">
+                    <div class="timer-value" id="seconds">30</div>
+                    <div class="timer-label">секунд</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Контакты -->
+        <div class="contacts">
+            <div class="contacts-title">Свяжитесь с нами:</div>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <span>+7 (915) 349-33-03</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span>info@farpost.tech</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Форма подписки -->
+        <div class="subscribe">
+            <div class="subscribe-title">Узнайте первыми о запуске!</div>
+            <form class="subscribe-form">
+                <input type="email" class="subscribe-input" placeholder="Ваш email" required>
+                <button type="submit" class="subscribe-button">Подписаться</button>
+            </form>
+        </div>
+        
+        <!-- Соцсети -->
+        <div class="social">
+            <div class="social-title">Мы в соцсетях:</div>
+            <div class="social-icons">
+                <a href="https://t.me/farpost_tech" target="_blank" class="social-icon">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://farpostt.bitrix24.ru" target="_blank" class="social-icon">
+                    <i class="fas fa-headset"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Копирайт -->
+        <div class="copyright">
+            &copy; [[!currentYear]] Farpost Technologies. Все права защищены.
+        </div>
+    </div>
+    
+    <script>
+        // Генерация частиц
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Случайные параметры
+                const size = Math.random() * 100 + 10;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = Math.random() * 10 + 10;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Таймер обратного отсчета
+        function updateTimer() {
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 15); // +15 дней от текущей даты
+            
+            function update() {
+                const now = new Date();
+                const diff = launchDate - now;
+                
+                if (diff <= 0) {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+                
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+            
+            update();
+            setInterval(update, 1000);
+        }
+        
+        // Обработка формы подписки
+        document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.subscribe-input').value;
+            
+            // Здесь можно добавить AJAX-запрос для сохранения email
+            alert(`Спасибо! Вы подписались на уведомление о запуске.\nНа email: ${email}`);
+            this.reset();
+        });
+        
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            updateTimer();
+        });
+    </script>
+</body>
+</html>

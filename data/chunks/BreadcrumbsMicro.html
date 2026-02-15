@@ -1,0 +1,23 @@
+id: 31
+source: 1
+name: BreadcrumbsMicro
+description: 'Хлебные крошки видимые и микро'
+properties: 'a:0:{}'
+
+-----
+
+<nav aria-label="Хлебные крошки" class="breadcrumbs">
+[[pdoCrumbs?
+    &showHome=`1`
+    &showAtHome=`0`
+    &showCurrent=`1`
+    &scheme=`full`
+    &tplWrapper=`@INLINE <ol itemscope itemtype="https://schema.org/BreadcrumbList">[[+output]]</ol>`
+    
+    &tpl=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="[[+link]]" itemprop="item"><span itemprop="name">[[+menutitle:default=`[[+pagetitle]]`]]</span></a><meta itemprop="position" content="[[+idx]]" /></li>`
+    
+    &tplCurrent=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">[[+menutitle:default=`[[+pagetitle]]`]]</span><meta itemprop="item" content="[[+link]]" /><meta itemprop="position" content="[[+idx]]" /></li>`
+    
+    &tplHome=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="[[+link]]" itemprop="item"><span itemprop="name">Главная</span></a><meta itemprop="position" content="1" /></li>`
+]]
+</nav>

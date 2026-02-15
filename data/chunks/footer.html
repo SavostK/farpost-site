@@ -1,0 +1,67 @@
+id: 2
+source: 1
+name: footer
+description: ''
+properties: 'a:0:{}'
+
+-----
+
+<footer class="footer" role="contentinfo">
+    <div class="footer-container">
+        <!-- Основная информация -->
+        <p>&copy; [[!currentYear]] 
+           <strong>[[++company_name]]</strong>. 
+           Все права защищены.
+        </p>
+        
+        <!-- Контактная информация -->
+        <p>
+            <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>
+            <strong>Адрес:</strong> [[++company_address]]
+        </p>
+        
+        <p>
+            <i class="far fa-clock" style="margin-right: 8px;"></i>
+            <strong>График работы:</strong> [[++company_opening_hours]] | 
+            <i class="fas fa-phone" style="margin-right: 8px;"></i>
+            <strong>Телефон:</strong> 
+            <a href="tel:[[++company_phone]]" style="color: #0066cc; text-decoration: none;">
+                [[++company_phone]]
+            </a>
+        </p>
+        
+        <p>
+            <i class="fas fa-envelope" style="margin-right: 8px;"></i>
+            <strong>Email:</strong> 
+            <a href="mailto:[[++company_email]]" style="color: #0066cc; text-decoration: none;">
+                [[++company_email]]
+            </a>
+        </p>
+        
+        <!-- Юридическая информация -->
+        <p style="font-size: 0.9em; color: #666; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
+            <i class="fas fa-file-contract" style="margin-right: 8px;"></i>
+            <strong>Реквизиты:</strong> 
+            <span>ИНН: [[++company_inn]]</span> | 
+            <span>КПП: [[++company_kpp]]</span> | 
+            <span>ОГРН: [[++company_ogrn]]</span>
+        </p>
+        
+        <!-- Социальные сети -->
+        <p style="margin-top: 15px;">
+            <strong>Мы в соцсетях:</strong>
+            <a href="[[++company_social_telegram]]" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               style="margin-left: 10px; color: #0088cc; text-decoration: none;">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+            <a href="[[++company_social_bitrix24]]" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               style="margin-left: 10px; color: #ff6b00; text-decoration: none;">
+                <i class="fas fa-headset"></i> Bitrix24
+            </a>
+        </p>
+    </div>
+</footer>
