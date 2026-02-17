@@ -1368,7 +1368,6 @@ body::before {
         color: var(--text-primary);
         padding-left: 30px !important;
         font-weight: 400;
-        transform: none;
     }
     
     .dropdown-item:hover {
