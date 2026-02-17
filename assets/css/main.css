@@ -1482,7 +1482,7 @@ body::before {
     }
     
     .dropdown-item:first-child {
-        padding-top: 16px !important;
+        padding-top: 18px !important;
     }
     
     .dropdown-item:last-child {
