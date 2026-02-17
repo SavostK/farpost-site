@@ -1123,12 +1123,8 @@ body::before {
     .logo-divider { height: 34px; margin: 0 15px 0 12px; }
     .logo-content { min-width: 160px; max-width: 200px; }
     .logo-slogan { font-size: 10px; letter-spacing: 0.4px; }
-    .header-contacts { 
-        display: none;
-    }
-    .nav-menu { margin-left: 0; margin-right: 0; margin: 0 auto; }
+    .nav-menu { margin: 0 auto; }
     .nav-list { gap: 20px; }
-    .nav-link { font-size: 12px; letter-spacing: 0.8px; padding: 12px 6px; }
     .section { padding: 40px; }
 }
 
@@ -1146,7 +1142,6 @@ body::before {
     .logo-content { 
         display: none;
     }
-    .nav-menu { margin-right: 0; }
     .nav-list { gap: 15px; }
     .nav-link { font-size: 11px; letter-spacing: 0.7px; padding: 10px 5px; }
     .section h2 { font-size: 26px; }
